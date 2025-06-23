@@ -1,0 +1,120 @@
+.comision-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 2rem;
+    background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    border: 2px solid #b2ebf2;
+}
+
+.comision-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00796b;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form select,
+.form input {
+    padding: 10px;
+    border: 1px solid #81d4fa;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #ffffff;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.form button {
+    padding: 10px;
+    background-color: #0288d1;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form button:hover {
+    background-color: #0277bd;
+    transform: scale(1.03);
+}
+
+.resultado {
+    margin-top: 2rem;
+    background-color: #e0f7fa;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid #b2ebf2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.resultado h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #00695c;
+}
+
+.resultado p {
+    font-size: 1rem;
+    color: #004d40;
+    margin: 0.25rem 0;
+}
+
+.resultado p strong {
+    color: #00796b;
+}
+
+.resultado table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.resultado table th {
+    background-color: #b2ebf2;
+    color: #006064;
+    padding: 12px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.resultado table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e0f2f1;
+    font-size: 0.95rem;
+    color: #004d40;
+}
+
+.resultado table tr:last-child td {
+    border-bottom: none;
+}
+
+.resultado table tr:hover td {
+    background-color: #f1fdfd;
+    transition: background-color 0.2s ease;
+}
+
+.sin-comisiones {
+    margin-top: 1.5rem;
+    background: #e0f7fa;
+    border: 1px dashed #00acc1;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #006064;
+    font-weight: 500;
+    text-align: center;
+}
