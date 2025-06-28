@@ -1,46 +1,120 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MiniCoreMultiCliente.FrontEnd
 
-## Available Scripts
+Aplicación frontend desarrollada con **React + Vite + TypeScript**, diseñada para consumir la API REST del sistema MiniCoreMultiCliente. Permite a los usuarios gestionar vendedores, ventas, clientes y calcular comisiones según las reglas definidas en el backend.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Estructura del proyecto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Este proyecto sigue una estructura modular basada en componentes reutilizables y principios de diseño limpio:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
 
-### `npm test`
+MiniCoreMultiCliente.FrontEnd/
+│
+├── src/
+│   ├── api/                   # Servicios para llamadas HTTP (axios)
+│   ├── auth/                  # Lógica de autenticación (tokens, sesión)
+│   ├── components/            # Componentes reutilizables de UI
+│   ├── context/               # Contextos globales (ej. usuario)
+│   ├── pages/                 # Vistas principales por módulo
+│   ├── routes/                # Rutas y navegación
+│   ├── styles/                # Archivos CSS y configuración visual
+│   └── main.tsx              # Punto de entrada de la app
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+````
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Funcionalidades
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Visualización y creación de clientes
+- Registro de ventas por vendedor
+- Consulta de comisiones por vendedor
+- Filtro de ventas por rango de fechas
+- Integración con backend mediante axios
+- Interfaz moderna, responsiva y ligera
+- Despliegue en Render y compatible con Docker
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Tecnologías principales
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- React 18 + TypeScript
+- Vite como bundler
+- Axios para consumo de API REST
+- React Router DOM
+- CSS personalizado y estructura modular
+- Render para hosting
+- GitHub Actions (opcional) para CI/CD
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Instalación local
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Clona el repositorio
 
-## Learn More
+```bash
+git clone https://github.com/DanielaMoraDevJourney/MiniCoreMultiCliente.FrontEnd.git
+cd MiniCoreMultiCliente.FrontEnd
+````
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Instala las dependencias
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+```
+
+3. Configura las variables de entorno
+
+Crea un archivo `.env` en la raíz del proyecto con:
+
+```
+VITE_API_BASE_URL=https://minicoremulticlienteapi.onrender.com/api
+```
+
+4. Ejecuta el servidor de desarrollo
+
+```bash
+npm run dev
+```
+
+---
+
+## Scripts disponibles
+
+| Script          | Descripción                       |
+| --------------- | --------------------------------- |
+| npm run dev     | Ejecuta la app en modo desarrollo |
+| npm run build   | Genera la versión para producción |
+| npm run preview | Visualiza la build de producción  |
+
+---
+
+## Integración con el backend
+
+Este frontend se conecta a la API desarrollada en .NET 8. Todos los endpoints están documentados en Swagger y se consumen a través del servicio central `api/axiosInstance.ts`.
+
+---
+
+## Despliegue
+
+El proyecto está desplegado en Render en la siguiente URL:
+
+[https://minicoremulticliente-frontend.onrender.com](https://minicoremulticliente-frontend.onrender.com)
+
+---
+
+## Repositorio del backend
+
+El sistema se complementa con el backend en .NET 8 disponible en:
+
+[MiniCoreMultiCliente.API](https://github.com/DanielaMoraDevJourney/MiniCoreMultiCliente.API.git)
+
+---
+
+## Autor
+
+Desarrollado por [Daniela Mora](https://github.com/DanielaMoraDevJourney) como proyecto full stack orientado a buenas prácticas, arquitectura limpia, separación de responsabilidades y patrones de diseño reutilizables.
+
